@@ -11,3 +11,23 @@ A research project exploring **cross-lingual semantic analysis** using academic 
 - Build an interactive dashboard
 
 ## Project Structure
+bilingual-nlp-research/
+├── src/
+│   ├── preprocessing.py
+│   ├── topic_model.py
+│   ├── embeddings.py
+│   ├── visualize.py
+│
+├── notebooks/
+│   ├── data-exploration.ipynb
+│   ├── topic-modelling.ipynb
+│
+├── data/
+│   ├── raw/
+│   ├── processed/
+│
+├── dashboard/
+│   └── app.py
+
+##  Installation
+pip install -r requirements.txt

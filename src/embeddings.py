@@ -1,12 +1,13 @@
-# src/embeddings.py
-
 from sentence_transformers import SentenceTransformer
+import numpy as np
 
-# Load a multilingual model (supports English + French)
-_model = SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
+# Load a multilingual embedding model
+embed_model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
 
-def embed_texts(text_list):
+def embed_texts(texts):
     """
-    Takes a list of preprocessed sentences and returns embeddings.
+    Input: list of strings
+    Output: numpy array of embeddings
     """
-    return _model.encode(text_list)
+    embeddings = embed_model.encode(texts)
+    return np.array(embeddings)
